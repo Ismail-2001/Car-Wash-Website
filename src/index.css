@@ -41,6 +41,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+  /* iOS Safari fixes */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Fix for iOS Safari bottom bar */
+@supports (-webkit-touch-callout: none) {
+  body {
+    min-height: -webkit-fill-available;
+  }
 }
 
 h1,
@@ -278,6 +288,24 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.mobile-menu-content a {
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: color 0.2s;
+  padding: 0.75rem 0;
+}
+
+.mobile-menu-content a:visited {
+  color: var(--foreground);
+}
+
+.mobile-menu-content a:hover,
+.mobile-menu-content a:active {
+  color: var(--primary);
 }
 
 .section-padding {

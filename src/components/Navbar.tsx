@@ -63,9 +63,45 @@ const Navbar = ({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () => v
                         className="mobile-menu"
                     >
                         <div className="mobile-menu-content">
-                            <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
-                            <a href="#packages" onClick={() => setIsMobileMenuOpen(false)}>Packages</a>
-                            <a href="#map" onClick={() => setIsMobileMenuOpen(false)}>Service Area</a>
+                            <a
+                                href="#services"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                style={{
+                                    color: 'var(--foreground)',
+                                    textDecoration: 'none',
+                                    fontSize: '1.125rem',
+                                    fontWeight: 600,
+                                    padding: '0.75rem 0'
+                                }}
+                            >
+                                Services
+                            </a>
+                            <a
+                                href="#packages"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                style={{
+                                    color: 'var(--foreground)',
+                                    textDecoration: 'none',
+                                    fontSize: '1.125rem',
+                                    fontWeight: 600,
+                                    padding: '0.75rem 0'
+                                }}
+                            >
+                                Packages
+                            </a>
+                            <a
+                                href="#map"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                style={{
+                                    color: 'var(--foreground)',
+                                    textDecoration: 'none',
+                                    fontSize: '1.125rem',
+                                    fontWeight: 600,
+                                    padding: '0.75rem 0'
+                                }}
+                            >
+                                Service Area
+                            </a>
                             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginTop: '1rem' }}>
                                 <button
                                     onClick={toggleTheme}
@@ -74,7 +110,7 @@ const Navbar = ({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () => v
                                 >
                                     {isDark ? <><Sun size={20} /> Light Mode</> : <><Moon size={20} /> Dark Mode</>}
                                 </button>
-                                <a href="#book" className="btn btn-primary" style={{ flex: 1 }} onClick={() => setIsMobileMenuOpen(false)}>Book Now</a>
+                                <a href="#book" className="btn btn-primary" style={{ flex: 1, textDecoration: 'none' }} onClick={() => setIsMobileMenuOpen(false)}>Book Now</a>
                             </div>
                         </div>
                     </motion.div>
