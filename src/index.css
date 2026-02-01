@@ -154,19 +154,19 @@ h6 {
 }
 
 .footer-links a:hover {
-  color: var(--primary);
+  color: white;
 }
 
 .footer-contact p {
   color: #94a3b8;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
-  color: #64748b;
+  color: #94a3b8;
   font-size: 0.875rem;
 }
 
@@ -615,4 +615,277 @@ p {
 
 .slide-in-right {
   animation: slide-in-right 0.6s ease-out forwards;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE ENHANCEMENTS
+   ======================================== */
+
+/* Tablet Breakpoint (1024px and below) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .hero-section {
+    padding-top: 100px !important;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem) !important;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .package-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Mobile Breakpoint (768px and below) */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Hero Section Mobile */
+  .hero-section {
+    min-height: auto !important;
+    padding: 120px 0 3rem 0 !important;
+  }
+
+  .hero-section>div {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  h2 {
+    font-size: 1.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  p {
+    font-size: 0.9375rem;
+  }
+
+  /* Button Adjustments */
+  .btn {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  /* Card Grid Mobile */
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    border-radius: 1.5rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  /* Package Cards Mobile */
+  .package-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .package-card {
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .package-card.popular {
+    transform: none;
+    margin: 0;
+  }
+
+  .price-amount {
+    font-size: 2.5rem !important;
+  }
+
+  /* Footer Mobile */
+  .footer-root {
+    padding: 4rem 0 2rem 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  /* Map Section Mobile */
+  .map-container {
+    height: 350px;
+    border-radius: 1.5rem;
+  }
+
+  .map-overlay {
+    position: relative;
+    top: auto;
+    left: auto;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Navbar Mobile Adjustments */
+  .navbar-root {
+    padding: 1rem 0;
+  }
+
+  .navbar-root.scrolled {
+    padding: 0.75rem 0;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  /* Badge Mobile */
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.625rem;
+  }
+
+  /* Trusted By Section Mobile */
+  .trusted-by {
+    padding: 3rem 0;
+  }
+
+  .logo-cloud {
+    gap: 2rem;
+  }
+
+  .logo-cloud span {
+    font-size: 1.125rem;
+  }
+}
+
+/* Small Mobile Breakpoint (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.875rem;
+  }
+
+  h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .section-padding {
+    padding: 2.5rem 0;
+  }
+
+  /* Hero Mobile Small */
+  .hero-section {
+    padding: 100px 0 2rem 0 !important;
+  }
+
+  /* Buttons Mobile Small */
+  .btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* Card Mobile Small */
+  .card-content {
+    padding: 1.25rem;
+  }
+
+  /* Package Mobile Small */
+  .package-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .price-amount {
+    font-size: 2rem !important;
+  }
+
+  .feature-item {
+    font-size: 0.875rem;
+  }
+
+  /* Map Mobile Small */
+  .map-container {
+    height: 300px;
+  }
+
+  /* Logo Cloud Mobile Small */
+  .logo-cloud {
+    gap: 1.5rem;
+  }
+
+  .logo-cloud span {
+    font-size: 1rem;
+  }
+
+  /* Footer Mobile Small */
+  .footer-root {
+    padding: 3rem 0 1.5rem 0;
+  }
+
+  .footer-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Touch Target Improvements for Mobile */
+@media (hover: none) and (pointer: coarse) {
+
+  .btn,
+  .nav-link,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .mobile-toggle {
+    padding: 0.75rem;
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto !important;
+    padding: 100px 0 2rem 0 !important;
+  }
+
+  .section-padding {
+    padding: 2rem 0;
+  }
 }
